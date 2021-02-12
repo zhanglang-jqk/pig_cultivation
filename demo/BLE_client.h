@@ -1,24 +1,21 @@
 /***********************************************************************
- * @file temperature.h
- * TEMPERATURE
+ * @file BLE_client.h
+ * BLE_CLIENT
  * @author	:	ch
  * @brief	:	
  * @version:	v1.0
  * @Copyright (C)  2020-12-10  .cdWFVCEL. all right reserved
 ***********************************************************************/
 
-#ifndef __TEMPERATURE_H_
-#define __TEMPERATURE_H_
+#ifndef __BLE_CLIENT_H_
+#define __BLE_CLIENT_H_
 /* 包含头文件 ------------------------------------------------------------------*/
 #include "ch/bsp.h"
 /* 宏定义 ----------------------------------------------------------------------*/
 /* 类型定义 --------------------------------------------------------------------*/
-#define TEMPERATURE_PIN 33
+#define JSON_FORMAT "{'temp':%d,'IR':%d,'BPM':%d,'ABPM':%d,'finger':%d}"
 /* 变量声明 --------------------------------------------------------------------*/
-extern double temperature;
-
-void Temp_Init();
-double Temp_Scan();
-
 /* 函数声明 --------------------------------------------------------------------*/
-#endif // __TEMPERATURE_H_
+void BLEC_Init();
+void BLEC_Prog();
+#endif // __BLE_CLIENT_H_
